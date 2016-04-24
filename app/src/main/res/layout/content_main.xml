@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="shubhamagarwal1.com.opengl_retry.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/GLView"
+        android:layout_width="200dip"
+        android:layout_height="300dip"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <Button
+        android:id="@+id/Button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Square"
+        android:onClick="Navigate_To_Square_Button"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:background="#ffffff"
+        android:textColor="#fc0000"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/GLView"
+        android:layout_alignStart="@+id/Button5" />
+
+    <Button
+        android:id="@+id/Button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Triangle"
+        android:onClick="Navigate_To_Triangle_Button"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:background="#ffffff"
+        android:textColor="#f40808"
+        android:layout_above="@+id/Button4"
+        android:layout_toEndOf="@+id/Button5" />
+    <Button
+        android:id="@+id/Button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Cube"
+        android:onClick="Navigate_To_Cube_Button"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:background="#ffffff"
+        android:textColor="#fc0000"
+        android:layout_above="@+id/Button4"
+        android:layout_toEndOf="@+id/Button2" />
+
+    <Button
+        android:id="@+id/Button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pyramid"
+        android:onClick="Navigate_To_Pyramid_Button"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:background="#ffffff"
+        android:textColor="#f40808"
+        android:layout_alignTop="@+id/Button5"
+        android:layout_alignStart="@+id/Button3" />
+    <Button
+        android:id="@+id/Button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Textured Cube"
+        android:onClick="Navigate_To_Textured_Cube_Button"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:background="#ffffff"
+        android:textColor="#f40808"
+        android:layout_below="@+id/Button1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="42dp" />
+
+</RelativeLayout>

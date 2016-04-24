@@ -1,0 +1,28 @@
+Readme - Grad Project - Computer Graphics cs533 - OpenGL ES Rendering on Android Plaform
+
+The project is basically an exploration of the OpenGL ES on Android mobile platform i.e. what is the process, how does it differ from C++ implementations on desktop verions, how the UI play its role,etc.
+
+System:
+The IDE used was Android Studio and the programming language used was Java SE.
+The system used for development was an HP Envy 15t Quad Core with Linux(Ubuntu 14.04) platform.
+The mobile system used for actual testing against the emulator was LG G2 D803.
+
+Results:
+The exploration was successful in creating or rendering 2D (Square,Triangle) and 3D (Cube, Cone/Pyramid) shapes using same concepts as in OpenGL for the desktop version. Moreover the exploration helped us in better understanding of the whole rendering preocess due to it being implemented in an another programming language - Java, giving us a basis for comparision with the C++ implementations learnt during the course.
+
+Bonus - The exploration was further successful in being able to learnmore about the UI elements and animation usin them such as using the touch interface and events to control the rendered-object transformations in real-time. This added a more intuitive feel to the whole learning process.
+This was achieved via implementing callback listeners in the main thread,using overrides, to facilitate the inter-thread communication between the main UI thread and the separate graphics GL thread. The objects rendered thus not only responded to the UI elements such as the sliders, etc but also to the touch events to give us the same performance and experience regarding real-time oject transformations.
+
+Challenges - 
+
+Learning the whole graphics rendering process using Java was a very different experience with its own language specific challenges. 
+Using multiple textures was the most challenging aspect and I need to figure out as to why recycling the textures was creatig problems.
+Figuring out the UIthread vs Graphics thread difference and the way to figure out the inter-thread commnication was also challenging. To figure out the async thread communication would not help in the process was also a wonderful discovery as the GL thread can only communicate directly with the main UI thread.
+
+
+Note :
+Certain UI elements such as the slider bars were not present in the Android toolbox , and it was
+a bit time-consuming to create them due to inherent verbosity of Java, therefore we imported such elements to facilitate our demonstration of OpenGL ES functionality without spending a considerable amount of time on the UI. The color slider was imported 
+from- "com.github.LarsWerkman:Lobsterpicker:1.0.1." at "https://github.com/LarsWerkman/Lobsterpicker"
+
+

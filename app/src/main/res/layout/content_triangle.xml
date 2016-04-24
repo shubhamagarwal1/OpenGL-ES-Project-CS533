@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="shubhamagarwal1.com.opengl_retry.TriangleActivity"
+    tools:showIn="@layout/activity_triangle">
+
+
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/GLView_Triangle"
+        android:layout_width="150dip"
+        android:layout_height="200dip"
+
+        android:layout_above="@+id/shadeslider"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/radiogroup"
+        android:layout_alignEnd="@+id/radiogroup" />
+
+
+
+    <!--<Button-->
+    <!--android:id="@+id/Button1"-->
+    <!--android:layout_width="150dip"-->
+    <!--android:layout_height="100dip"-->
+    <!--android:text="Square"-->
+    <!--android:layout_below="@id/GLView_Triangle"-->
+    <!--android:layout_alignBaseline="@id/GLView"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/Button2"-->
+    <!--android:layout_width="150dip"-->
+    <!--android:layout_height="100dip"-->
+    <!--android:text="Triangle"-->
+    <!--android:layout_below="@id/GLView_Triangle"-->
+    <!--android:layout_toRightOf="@id/Button1"-->
+    <!--android:layout_toEndOf="@id/Button1"-->
+    />
+
+    <com.larswerkman.lobsterpicker.sliders.LobsterOpacitySlider
+        android:id="@+id/opacityslider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/radiogroup" />
+
+    <com.larswerkman.lobsterpicker.sliders.LobsterShadeSlider
+        android:id="@+id/shadeslider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/opacityslider"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radiogroup"
+        android:layout_below="@+id/GLView_Triangle"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/shadeslider">
+
+        <RadioButton
+            android:id="@+id/vA_radio"
+            android:layout_height="wrap_content"
+            android:text="Vertex A"
+            android:layout_width="wrap_content"
+            android:layout_alignTop="@+id/GLView_Triangle"
+            android:onClick="setVertexA"
+            android:layout_alignParentEnd="true"
+            android:checked="true"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:text="Vertex B"
+            android:id="@+id/vB_radio"
+            android:layout_below="@+id/vA_radio"
+            android:layout_alignStart="@+id/vA_radio"
+            android:layout_width="wrap_content"
+            android:onClick="setVertexB"
+            android:layout_gravity="right" />
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:text="Vertex C"
+            android:id="@+id/vC_radio"
+            android:layout_below="@+id/vB_radio"
+            android:layout_alignStart="@+id/vB_radio"
+            android:layout_width="wrap_content"
+            android:onClick="setVertexC"
+            android:layout_gravity="right" />
+
+    </RadioGroup>
+</RelativeLayout>
